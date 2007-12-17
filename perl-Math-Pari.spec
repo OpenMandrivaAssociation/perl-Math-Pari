@@ -14,7 +14,6 @@ URL:		http://search.cpan.org/dist/%{module}
 Source0:	http://www.cpan.org/modules/by-module/Math/%{module}-%{version}.tar.bz2
 Source1:        ftp://megrez.math.u-bordeaux.fr/pub/pari/unix/pari-%{pariversion}.tar.bz2
 BuildRequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This package is a Perl interface to famous library PARI for
