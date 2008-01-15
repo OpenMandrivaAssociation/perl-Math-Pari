@@ -2,7 +2,7 @@
 %define	name		perl-%{module}
 %define	version		2.010709
 %define pariversion	2.1.7
-%define	release		%mkrel 2
+%define	release		%mkrel 3
 
 Name:		%{name}
 Version:	%{version}
