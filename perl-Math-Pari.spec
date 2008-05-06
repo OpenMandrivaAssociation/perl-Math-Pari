@@ -1,8 +1,8 @@
 %define module		Math-Pari
 %define	name		perl-%{module}
-%define	version		2.010709
+%define	version		2.010800
 %define pariversion	2.1.7
-%define	release		%mkrel 3
+%define	release		%mkrel 1
 
 Name:		%{name}
 Version:	%{version}
