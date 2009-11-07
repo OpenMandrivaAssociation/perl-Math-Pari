@@ -1,20 +1,21 @@
-%define module		Math-Pari
-%define	name		perl-%{module}
-%define	version		2.010801
-%define pariversion	2.3.3
-%define	release		%mkrel 2
+%define upstream_name	 Math-Pari
+%define	upstream_version 2.010806
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Summary:        Perl interface to PARI
-License:        GPL or Artistic
-Group:          Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source0:	http://www.cpan.org/modules/by-module/Math/%{module}-%{version}.tar.gz
-Source1:        ftp://megrez.math.u-bordeaux.fr/pub/pari/unix/pari-%{pariversion}.tar.gz
+%define pari_version	2.3.3
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Perl interface to PARI
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.gz
+Source1:    ftp://megrez.math.u-bordeaux.fr/pub/pari/unix/pari-%{pari_version}.tar.gz
+
 BuildRequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This package is a Perl interface to famous library PARI for
@@ -24,11 +25,11 @@ PARI and Perl data. See ftp://megrez.math.u-bordeaux.fr/pub/pari for
 more information about PARI.
 
 %prep
-%setup -q -n %{module}-%{version}
-%setup -q -a 1 -n %{module}-%{version}
+%setup -q      -n %{upstream_name}-%{upstream_version}
+%setup -q -a 1 -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor paridir=pari-%{pariversion} < /dev/null
+%{__perl} Makefile.PL INSTALLDIRS=vendor paridir=pari-%{pari_version} < /dev/null
 %make CFLAGS="%{optflags}"
 
 %ifnarch x86_64
@@ -49,5 +50,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Math
 %{perl_vendorarch}/auto/Math
 %{_mandir}/*/*
-
-
