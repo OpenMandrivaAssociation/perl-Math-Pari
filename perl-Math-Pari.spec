@@ -1,5 +1,5 @@
 %define upstream_name	 Math-Pari
-%define upstream_version 2.01080603
+%define upstream_version 2.01080604
 
 %define pari_version	2.3.3
 
