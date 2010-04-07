@@ -5,11 +5,11 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 Epoch:      1
 
 Summary:    Perl interface to PARI
-License:    GPL+ or Artistic
+License:    GPLv2+ or Artistic
 Group:      Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.gz
@@ -46,7 +46,7 @@ rm -rf %{buildroot}
 rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
+%defattr(644,root,root,755)
 %doc README Changes
 %{perl_vendorarch}/Math
 %{perl_vendorarch}/auto/Math
