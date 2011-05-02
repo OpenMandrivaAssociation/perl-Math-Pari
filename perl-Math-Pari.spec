@@ -1,11 +1,11 @@
 %define upstream_name	 Math-Pari
-%define upstream_version 2.01080604
+%define upstream_version 2.01080605
 
 %define pari_version	2.3.3
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 Epoch:      1
 
 Summary:    Perl interface to PARI
