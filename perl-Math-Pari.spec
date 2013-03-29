@@ -1,13 +1,13 @@
-%define upstream_name	 Math-Pari
+%define upstream_name Math-Pari
 %define upstream_version 2.01080605
 
-%define pari_version	2.3.3
+%define pari_version 2.3.3
 
 Summary:	Perl interface to PARI
 Name:		perl-%{upstream_name}
 Epoch:		1
 Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Release:	7
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
@@ -24,7 +24,7 @@ PARI and Perl data. See ftp://megrez.math.u-bordeaux.fr/pub/pari for
 more information about PARI.
 
 %prep
-%setup -q      -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 %setup -q -a 1 -n %{upstream_name}-%{upstream_version}
 
 %build
