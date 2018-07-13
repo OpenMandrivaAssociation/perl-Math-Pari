@@ -13,6 +13,7 @@ Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Math/%{modname}-%{modver}.tar.gz
 Source1:	ftp://megrez.math.u-bordeaux.fr/pub/pari/unix/pari-%{pari_version}.tar.gz
 
+BuildRequires:	perl(PARI::822)
 BuildRequires:	perl-devel
 
 %description
